@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Comfort</title>
+<meta name="description" content="Creative Comfort is Vernon's residential building design practice in Bellevue, Washington, established 1992. Custom homes, remodels, additions and ADUs, drawn to be built.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+/* ---------------------------------------------------------------------
+   Creative Comfort, Bellevue WA. Residential building design since 1992.
+   Light-first (a drawing office), with a real dark mode. The sunrise in
+   Vernon's own mark gives the accent: amber on deep pine.
+   Edit content in the <section> blocks below; styles stay up here.
+   --------------------------------------------------------------------- */
+:root{
+  --bg:#f6f3ec; --bg-2:#ede8de; --surface:#fdfbf7; --rule:#d8d1c3;
+  --ink:#1d2320; --ink-2:#4b534e; --muted:#7c837d;
+  --pine:#1f3a34; --pine-ink:#f3f6f4; --amber:#c98a1e; --amber-soft:rgba(201,138,30,.14);
+  --line:#2a3330;
+  --wordmark:"Cinzel","Trajan Pro",Georgia,serif;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1120px; --gutter:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --bg-2:#1a211e; --surface:#1f2724; --rule:#303935;
+  --ink:#ebe9e2; --ink-2:#b9b8ae; --muted:#858a84;
+  --pine:#e3ece8; --pine-ink:#152420; --amber:#e0a43a; --amber-soft:rgba(224,164,58,.14);
+  --line:#e3ece8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --bg-2:#1a211e; --surface:#1f2724; --rule:#303935;
+  --ink:#ebe9e2; --ink-2:#b9b8ae; --muted:#858a84;
+  --pine:#e3ece8; --pine-ink:#152420; --amber:#e0a43a; --amber-soft:rgba(224,164,58,.14);
+  --line:#e3ece8; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scrollbar-gutter:stable}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.55; overflow-x:hidden; -webkit-font-smoothing:antialiased}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--pine); text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--amber); outline-offset:3px}
+h1,h2,h3{font-family:var(--display); font-weight:500; line-height:1.08; margin:0; text-wrap:balance; letter-spacing:-.01em}
+h1{font-size:clamp(38px,6.4vw,70px); font-weight:400}
+h2{font-size:clamp(30px,4vw,44px)}
+h3{font-size:21px}
+p{margin:0 0 1em; max-width:62ch}
+.wrap{max-width:var(--wrap); margin:0 auto; padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--body); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--amber); margin:0 0 14px}
+section{padding-block:clamp(56px,9vw,112px); border-top:1px solid var(--rule)}
+.lede{font-size:clamp(19px,2.1vw,23px); color:var(--ink-2); font-family:var(--display); font-weight:400; max-width:50ch}
+h2 + .lede{margin-top:18px}
+
+/* nav + wordmark */
+.nav{position:sticky; top:0; z-index:5; background:color-mix(in srgb,var(--bg) 90%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px}
+.brand{display:flex; align-items:center; gap:12px; color:var(--ink); text-decoration:none}
+.brand svg{width:34px; height:34px; flex:none}
+.brand span{font-family:var(--wordmark); font-weight:600; font-size:17px; letter-spacing:.08em; text-transform:uppercase}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:22px}
+.nav li a{color:var(--ink-2); text-decoration:none; font-size:15px; font-weight:500; padding:10px 0; display:inline-block}
+.nav li a:hover{color:var(--ink)}
+@media (max-width:720px){.nav ul{display:none}}
+
+/* hero */
+.hero{border-top:0; padding-block:clamp(40px,7vw,88px) clamp(32px,5vw,64px)}
+.hero .wrap{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(24px,5vw,64px); align-items:center}
+.hero .since{font-family:var(--body); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 20px}
+.hero h1 em{font-style:italic; color:var(--amber); font-weight:400}
+.hero .lede{margin-top:24px}
+.cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+.btn{display:inline-flex; align-items:center; justify-content:center; height:48px; padding:0 22px; border-radius:4px; font-weight:600; font-size:16px; text-decoration:none; border:1px solid transparent; white-space:nowrap}
+.btn-primary{background:var(--pine); color:var(--pine-ink)}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn-ghost{border-color:var(--rule); color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink-2)}
+.sheet{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:clamp(14px,2.4vw,26px); position:relative}
+.sheet::after{content:attr(data-label); position:absolute; left:clamp(14px,2.4vw,26px); bottom:10px; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:600}
+.sheet img{mix-blend-mode:multiply; padding-bottom:28px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sheet img{filter:invert(1) brightness(.92); mix-blend-mode:screen}}
+:root[data-theme="dark"] .sheet img{filter:invert(1) brightness(.92); mix-blend-mode:screen}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* work */
+.work{display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:22px; margin-top:40px}
+.work article{grid-column:span 4; background:var(--surface); border:1px solid var(--rule); border-radius:4px; overflow:hidden; display:flex; flex-direction:column}
+.work article.lead{grid-column:span 8}
+.work .media{aspect-ratio:3/2; background:var(--bg-2); display:grid; place-items:center; overflow:hidden; border-bottom:1px solid var(--rule); position:relative}
+.work article.lead .media{aspect-ratio:2/1}
+.work .media img{width:100%; height:100%; object-fit:contain; padding:14px; mix-blend-mode:multiply}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .work .media img{filter:invert(1) brightness(.92); mix-blend-mode:screen}}
+:root[data-theme="dark"] .work .media img{filter:invert(1) brightness(.92); mix-blend-mode:screen}
+.work .media.photo{background:repeating-linear-gradient(135deg,var(--bg-2) 0 10px,var(--surface) 10px 20px)}
+.work .media.photo span{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); background:var(--surface); padding:8px 12px; border:1px solid var(--rule); border-radius:4px}
+.work .body{padding:20px 22px 22px}
+.work .body p{color:var(--ink-2); font-size:16px; margin:8px 0 0}
+.work .kind{font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--amber); margin:0 0 6px}
+.work article.half{grid-column:span 6}
+@media (max-width:1000px){.work article,.work article.lead,.work article.half{grid-column:span 6}}
+@media (max-width:860px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.services{grid-template-columns:1fr}}
+@media (max-width:640px){.work article,.work article.lead,.work article.half{grid-column:span 12}}
+
+/* services */
+.services{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-top:40px}
+.services div{background:var(--surface); padding:24px 24px 26px}
+.services h3{font-size:20px; margin-bottom:8px}
+.services p{margin:0; color:var(--ink-2); font-size:16px}
+
+/* process */
+.steps{counter-reset:step; list-style:none; margin:40px 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px 36px}
+.steps li{counter-increment:step; padding-top:18px; border-top:2px solid var(--line)}
+.steps li::before{content:counter(step,decimal-leading-zero); font-family:var(--display); font-size:30px; color:var(--amber); display:block; margin-bottom:8px}
+.steps h3{font-size:20px; margin-bottom:6px}
+.steps p{margin:0; color:var(--ink-2); font-size:16px}
+
+/* about + contact */
+.two{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,5vw,72px); align-items:start}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.card{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:26px 28px}
+address{font-style:normal; font-family:var(--display); font-size:clamp(22px,2.4vw,28px); line-height:1.3}
+address a{text-decoration:none}
+address a:hover{text-decoration:underline}
+.cred{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.cred span{font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); border:1px solid var(--rule); border-radius:4px; padding:7px 11px; background:var(--surface)}
+
+footer{border-top:1px solid var(--rule); padding:40px 0 48px; color:var(--muted); font-size:14px}
+footer .wrap{display:flex; flex-wrap:wrap; gap:14px 36px; justify-content:space-between; align-items:center}
+footer a{color:var(--ink-2)}
+textarea{resize:none; field-sizing:content}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Page">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Creative Comfort">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="19" r="6.5" fill="var(--amber)"/><path d="M2 31 L11 18.5 L16 25.5 L22 15 L32 31 Z" fill="var(--pine)"/><path d="M2 31h30" stroke="var(--amber)" stroke-width="1.5"/></svg>
+      <span>Creative Comfort</span>
+    </a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO ============================================================ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="since">Bellevue, Washington · Established 1992</p>
+      <h1>Homes drawn to be <em>built.</em></h1>
+      <p class="lede">Creative Comfort is Vernon's residential design practice: custom homes, remodels, additions and ADUs, taken from the first sketch through a permit-ready set and on through construction.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Start a conversation</a>
+        <a class="btn btn-ghost" href="#work">See the work</a>
+      </div>
+    </div>
+    <figure class="sheet" data-label="Rose B · Front elevation · Edmonds, 2024">
+      <img src="img/roseb-front-elevation.webp" width="2833" height="1394" alt="Architectural front elevation of the Rose B house: a two-storey modern home with shed roofs, exposed beams, a covered entry porch and two garage doors" loading="eager">
+    </figure>
+  </div>
+</section>
+
+<!-- WORK ============================================================ -->
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow">Selected work</p>
+    <h2>Houses since 1992, and one memorial.</h2>
+    <div class="work">
+      <article class="lead">
+        <div class="media"><img src="img/memorial-elevation.webp" width="1211" height="1790" alt="Elevation drawing of the 9/11 Memorial in Milton: a bent steel column on a plaza" loading="lazy" style="object-position:center"></div>
+        <div class="body">
+          <p class="kind">Civic · Milton, Washington</p>
+          <h3>9/11 Memorial Plaza</h3>
+          <p>A 36-foot column of World Trade Center steel on a new plaza in Triangle Park, designed for three cities and a community of volunteers. Dedicated September 11, 2021. <a href="https://911memorialplazawa.com">Visit the memorial's site</a>.</p>
+        </div>
+      </article>
+      <article>
+        <div class="media"><img src="img/roseb-front-elevation.webp" width="2833" height="1394" alt="Rose B front elevation" loading="lazy"></div>
+        <div class="body">
+          <p class="kind">New construction · Edmonds</p>
+          <h3>Rose B</h3>
+          <p>Modern two-storey home for Kelli Homes: shed roofs, exposed beams, Hardie lap and vertical cedar, standing-seam metal roof. Permit set released March 2024.</p>
+        </div>
+      </article>
+      <article>
+        <div class="media photo"><span>Photographs to come</span></div>
+        <div class="body">
+          <p class="kind">New construction · Issaquah</p>
+          <h3>Lodge-style home</h3>
+          <p>Lodge-style new construction in Issaquah. Twenty-three photographs on Houzz; the originals go here.</p>
+        </div>
+      </article>
+      <article>
+        <div class="media photo"><span>Photographs to come</span></div>
+        <div class="body">
+          <p class="kind">New construction · Bellevue</p>
+          <h3>Lake-view custom home</h3>
+          <p>Custom lake-view home in Bellevue. Photographs and a few lines from Vernon go here.</p>
+        </div>
+      </article>
+      <article>
+        <div class="media photo"><span>Photographs to come</span></div>
+        <div class="body">
+          <p class="kind">New construction · Kent</p>
+          <h3>Family home</h3>
+          <p>New construction in Kent. Photographs and a few lines from Vernon go here.</p>
+        </div>
+      </article>
+      <article class="half">
+        <div class="media photo"><span>Photographs to come</span></div>
+        <div class="body">
+          <p class="kind">Remodel</p>
+          <h3>Traditional remodel</h3>
+          <p>Whole-house traditional remodel. Fourteen photographs on Houzz; the originals go here.</p>
+        </div>
+      </article>
+      <article class="half">
+        <div class="media photo"><span>Photographs to come</span></div>
+        <div class="body">
+          <p class="kind">Remodel · Seattle</p>
+          <h3>Traditional kitchen and dining nook</h3>
+          <p>Thirteen photographs on Houzz; the originals go here.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES ======================================================== -->
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>From the first sketch to the last inspection.</h2>
+    <div class="services">
+      <div><h3>Custom homes</h3><p>Site planning, floor plans, elevations and a full permit-ready set, with the structural engineer coordinated.</p></div>
+      <div><h3>Remodels and additions</h3><p>Kitchens, second storeys, extensions and whole-house remodels that respect what's already there.</p></div>
+      <div><h3>ADUs and guesthouses</h3><p>Detached and attached units designed to the local code, from feasibility through permit.</p></div>
+      <div><h3>Accessible design</h3><p>Homes planned for aging in place and for wheelchair access, without looking clinical.</p></div>
+      <div><h3>Energy-efficient homes</h3><p>Envelope, orientation and systems considered from the start, not bolted on.</p></div>
+      <div><h3>Construction support</h3><p>Questions from the field answered while the house is being built, so the drawings get built as drawn.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS ========================================================= -->
+<section id="process">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Four steps, no surprises.</h2>
+    <ol class="steps">
+      <li><h3>Talk</h3><p>A conversation about the site, the budget and how you live. You leave knowing whether the idea is buildable and roughly what it takes.</p></li>
+      <li><h3>Design</h3><p>Preliminary plans and elevations you can react to. Revisions until the house is yours.</p></li>
+      <li><h3>Permit set</h3><p>Architectural and framing drawings, specifications and details, coordinated with engineering and ready for the building department.</p></li>
+      <li><h3>Build</h3><p>Site questions answered during construction. Changes are approved in writing, so the house that gets built is the one that was drawn.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ABOUT =========================================================== -->
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Vernon.</h2>
+      <p class="lede">Building designer, Bellevue, since 1992. Member of the American Institute of Building Design.</p>
+      <p>Every set that leaves the office carries the same note: if a question comes up in the field, ask before proceeding. That is the whole practice in a sentence. The drawings are made to be built from, and the designer stays reachable until the house is done.</p>
+      <div class="cred"><span>AIBD member</span><span>Established 1992</span><span>Bellevue, WA</span></div>
+    </div>
+    <figure class="sheet" data-label="Rose B · Detail · Front entry">
+      <img src="img/roseb-front-elevation.webp" width="2833" height="1394" alt="Front elevation drawing, repeated as a sheet detail" loading="lazy" style="object-fit:cover; aspect-ratio:4/3; object-position:28% 60%">
+    </figure>
+  </div>
+</section>
+
+<!-- CONTACT ========================================================= -->
+<section id="contact">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Tell me about the house.</h2>
+      <p class="lede">A call or an email is the start. Bring the lot, a sketch, a listing, or just the idea.</p>
+    </div>
+    <div class="card">
+      <address>
+        <a href="tel:+12066193995">206-619-3995</a><br>
+        <a href="mailto:creativecomfort7@gmail.com">creativecomfort7@gmail.com</a>
+      </address>
+      <p style="margin-top:18px; color:var(--ink-2)">Creative Comfort<br>1611 116th Avenue NE, Suite 224<br>Bellevue, WA 98004</p>
+      <p style="margin:0; color:var(--ink-2)">Serving Seattle and the Eastside.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Creative Comfort · Residential building design · Bellevue, Washington · Since 1992</div>
+    <div><a href="https://911memorialplazawa.com">9/11 Memorial Plaza, Milton</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
