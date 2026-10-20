@@ -96,6 +96,14 @@ h2 + .lede{margin-top:18px}
 .work .media img{width:100%; height:100%; object-fit:contain; padding:14px; mix-blend-mode:multiply}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .work .media img{filter:invert(1) brightness(.92); mix-blend-mode:screen}}
 :root[data-theme="dark"] .work .media img{filter:invert(1) brightness(.92); mix-blend-mode:screen}
+.work .media.shot img{object-fit:cover; padding:0; mix-blend-mode:normal; filter:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .work .media.shot img{filter:none; mix-blend-mode:normal}}
+:root[data-theme="dark"] .work .media.shot img{filter:none; mix-blend-mode:normal}
+.strip{display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:12px; margin-top:22px}
+.strip figure{margin:0; aspect-ratio:4/3; overflow:hidden; border-radius:4px; border:1px solid var(--rule); background:var(--bg-2)}
+.strip img{width:100%; height:100%; object-fit:cover}
+@media (max-width:900px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .work .media.photo{background:repeating-linear-gradient(135deg,var(--bg-2) 0 10px,var(--surface) 10px 20px)}
 .work .media.photo span{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); background:var(--surface); padding:8px 12px; border:1px solid var(--rule); border-radius:4px}
 .work .body{padding:20px 22px 22px}
@@ -196,46 +204,54 @@ textarea{resize:none; field-sizing:content}
           <p>Modern two-storey home for Kelli Homes: shed roofs, exposed beams, Hardie lap and vertical cedar, standing-seam metal roof. Permit set released March 2024.</p>
         </div>
       </article>
-      <article>
-        <div class="media photo"><span>Photographs to come</span></div>
+      <article class="half">
+        <div class="media shot"><img src="img/issaquah-front.webp" width="1400" height="1050" alt="Lodge-style home in Issaquah: stone base, timber entry gable, metal roof, evening light" loading="lazy"></div>
         <div class="body">
           <p class="kind">New construction · Issaquah</p>
           <h3>Lodge-style home</h3>
-          <p>Lodge-style new construction in Issaquah. Twenty-three photographs on Houzz; the originals go here.</p>
+          <p>Stone, timber and a steel roof on a wooded lot, with a vaulted great room under exposed trusses.</p>
         </div>
       </article>
-      <article>
-        <div class="media photo"><span>Photographs to come</span></div>
+      <article class="half">
+        <div class="media shot"><img src="img/bellevue-front.webp" width="1400" height="1050" alt="Bellevue custom home: a three-storey shingled house with a round window and a tower bay, among evergreens" loading="lazy"></div>
         <div class="body">
           <p class="kind">New construction · Bellevue</p>
           <h3>Lake-view custom home</h3>
-          <p>Custom lake-view home in Bellevue. Photographs and a few lines from Vernon go here.</p>
+          <p>Three storeys among the evergreens, with a tower bay and a round window on the front.</p>
         </div>
       </article>
       <article>
-        <div class="media photo"><span>Photographs to come</span></div>
+        <div class="media shot"><img src="img/kent-back.webp" width="1400" height="1050" alt="Kent home from the back: two storeys over a wide deck with a hot tub" loading="lazy"></div>
         <div class="body">
           <p class="kind">New construction · Kent</p>
           <h3>Family home</h3>
-          <p>New construction in Kent. Photographs and a few lines from Vernon go here.</p>
+          <p>Two storeys over a wide back deck with a hot tub, and a covered patio off the lower floor.</p>
         </div>
       </article>
-      <article class="half">
-        <div class="media photo"><span>Photographs to come</span></div>
+      <article>
+        <div class="media shot"><img src="img/remodel-dining.webp" width="1400" height="1050" alt="Traditional remodel: dining room with a chandelier, wainscot and a bay of windows" loading="lazy"></div>
         <div class="body">
           <p class="kind">Remodel</p>
           <h3>Traditional remodel</h3>
-          <p>Whole-house traditional remodel. Fourteen photographs on Houzz; the originals go here.</p>
+          <p>A whole-house traditional remodel: new kitchen, dining room, baths and a living room around the fireplace.</p>
         </div>
       </article>
-      <article class="half">
-        <div class="media photo"><span>Photographs to come</span></div>
+      <article>
+        <div class="media shot"><img src="img/kitchen-island.webp" width="1400" height="1050" alt="Seattle kitchen: long island with seating, maple cabinets, dining table beyond" loading="lazy"></div>
         <div class="body">
           <p class="kind">Remodel · Seattle</p>
           <h3>Traditional kitchen and dining nook</h3>
-          <p>Thirteen photographs on Houzz; the originals go here.</p>
+          <p>A long island with seating, maple cabinetry, and the dining nook opened to the kitchen.</p>
         </div>
       </article>
+    </div>
+    <div class="strip" aria-label="More photographs">
+      <figure><img src="img/issaquah-greatroom.webp" alt="Issaquah great room: dining under a vaulted timber ceiling" loading="lazy"></figure><figure><img src="img/issaquah-kitchen.webp" alt="Issaquah kitchen: white cabinets under the timber trusses" loading="lazy"></figure>
+      <figure><img src="img/issaquah-entry.webp" alt="Issaquah entry: timber gable over the front door" loading="lazy"></figure>
+      
+      <figure><img src="img/remodel-living.webp" alt="Remodel living room around a stone fireplace" loading="lazy"></figure>
+      <figure><img src="img/kent-patio.webp" alt="Kent home: covered patio with a stone wall" loading="lazy"></figure>
+      <figure><img src="img/bellevue-side.webp" alt="Bellevue home from the side, tower bay and round window" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -309,7 +325,7 @@ textarea{resize:none; field-sizing:content}
 
 <footer>
   <div class="wrap">
-    <div>Creative Comfort · Residential building design · Bellevue, Washington · Since 1992</div>
+    <div>Creative Comfort · Residential building design · Bellevue, Washington · Since 1992 · Photographs from the Creative Comfort portfolio</div>
     <div><a href="https://911memorialplazawa.com">9/11 Memorial Plaza, Milton</a></div>
   </div>
 </footer>
